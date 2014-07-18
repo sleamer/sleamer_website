@@ -1,0 +1,22 @@
+Jake Code
+<html>
+<div>
+  <ul id="carousel">
+    <li><img src="images/1.jpg" data-tag="portrait landscape color" class="hidden"></li>
+    <li><img src="images/1.jpg" data-tag="landscape color" class="hidden"></li>
+    <li><img src="images/1.jpg" data-tag="portrait landscape color" class="hidden"></li>
+    <li><img src="images/1.jpg" data-tag="portrait landscape color" class="hidden"></li>
+    <li><img src="images/1.jpg" data-tag="color" class="hidden"></li>
+    <li><img src="images/1.jpg" data-tag="portrait landscape color" class="hidden"></li>
+  </ul>
+</div>
+<script>
+  $filtered_list = $('#list').find('img')
+            .filter(function(i, $el){
+              if ($el.data('tag').indexOf('portrait') != -1 )
+                return $el;
+            }); // [ <li>, <li>, ... ]
+
+  $('#carousel').html($filtered_list.html());
+</script>
+  </html>

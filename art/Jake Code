@@ -1,7 +1,7 @@
 Jake Code
 <html>
 <div>
-  <ul id="carousel">
+  <ul id="list">
     <li><img src="images/1.jpg" data-tag="portrait landscape color" class="hidden"></li>
     <li><img src="images/1.jpg" data-tag="landscape color" class="hidden"></li>
     <li><img src="images/1.jpg" data-tag="portrait landscape color" class="hidden"></li>
@@ -11,12 +11,36 @@ Jake Code
   </ul>
 </div>
 <script>
-  $filtered_list = $('#list').find('img')
-            .filter(function(i, $el){
-              if ($el.data('tag').indexOf('portrait') != -1 )
-                return $el;
-            }); // [ <li>, <li>, ... ]
 
   $('#carousel').html($filtered_list.html());
 </script>
   </html>
+ /* look up callback */
+
+ Drop down Selection
+ color, landscape, portrait etc..
+ var artMenu = "menuselection from above" 
+
+ var $el = $('#list li').filter('li img[data-state=artMenu]');
+var results = $el.html();
+ var newCodeLump = "<div><ul id="carousel1">" Results "</ul></div>"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   var forMatches = function(li){
+ take image from it and return Li 
+        };
+
+  var $filtered-list = $('#list').find('li')
+            .filter(forMatches); // [ <li>, <li>, ... ]

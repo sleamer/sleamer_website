@@ -8,29 +8,21 @@
 <body>
 <!-- The chunk of HTML to be filtered -->
 <ul>
-  <li><strong>list</strong> item 1 - one strong tag</li>
-  <li><strong>list</strong> item <strong>2</strong> -
-    two <span>strong tags</span></li>
-  <li>list item 3</li>
-  <li>list item 4</li>
-  <li>list item 5</li>
-  <li>list item 6</li>
+  <li><img src="artimages/landscape800x600.jpg" data-art-subject="landscape" data-art-media="acrylic" class="artImage"></li>
+  <li><img src="artimages/portrait600x800.jpg" data-art-subject="portrait" data-art-media="oil" class="artImage"></li>
+  <li><img src="artimages/landscape800x600.jpg" data-art-subject="landscape" data-art-media="oil" class="artImage"></li>
+  <li><img src="artimages/portrait600x800.jpg" data-art-subject="portrait" data-art-media="acrylic" class="artImage"></li>
+  <li><img src="artimages/landscape800x600.jpg" data-art-subject="landscape" data-art-media="watercolor" class="artImage"></li>
+  <li><img src="artimages/portrait600x800.jpg" data-art-subject="portrait" data-art-media="acrylic" class="artImage"></li>
 </ul>
 <script type="text/javascript">
 /*Put in the filter here*/
 		$( "li" )
 		  .filter(function( index ) {
-		    return $( "img", this ). === "landscape";
+		    return $( "img", this ).data("art-subject") === "landscape";
 		  })
 		    .css( "background-color", "red" );
 </script>
 
-<script type="text/javascript">
-		$( "li" )
-		  .filter(function( index ) {
-		    return $( "strong", this ).length === 1;
-		  })
-		    .css( "background-color", "red" );
-</script>
 </body>
 </html>

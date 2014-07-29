@@ -2,27 +2,38 @@
 <html>
 <head>
   <title>Getting Javascript to work</title>
+  <link href="../css/tiksluscarousel.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="../css/sleamerstyle.css">
   <script type="text/javascript" src="https://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.min.js"></script>
+  <script src="../js/tiksluscarousel.min.js"></script>
 </head>
 <body>
 <!-- The chunk of HTML to be filtered -->
-<ul>
-  <li><img src="artimages/landscape800x600.jpg" data-art-subject="landscape" data-art-media="acrylic" class="artImage"></li>
-  <li><img src="artimages/portrait600x800.jpg" data-art-subject="portrait" data-art-media="oil" class="artImage"></li>
-  <li><img src="artimages/landscape800x600.jpg" data-art-subject="landscape" data-art-media="oil" class="artImage"></li>
-  <li><img src="artimages/portrait600x800.jpg" data-art-subject="portrait" data-art-media="acrylic" class="artImage"></li>
-  <li><img src="artimages/landscape800x600.jpg" data-art-subject="landscape" data-art-media="watercolor" class="artImage"></li>
-  <li><img src="artimages/portrait600x800.jpg" data-art-subject="portrait" data-art-media="acrylic" class="artImage"></li>
+<div id="carousel1">
+<ul id="artWork">
+    <li><img src="artimages/landscape800x600.jpg" data-art-subject="landscape" data-art-media="oil" class="artImage"></li>
+    <li><img src="artimages/portrait600x800.jpg" data-art-subject="portrait" data-art-media="oil" class="artImage"></li>
+    <li><img src="artimages/landscape800x600.jpg" data-art-subject="landscape" data-art-media="oil" class="artImage"></li>
+    <li><img src="artimages/portrait600x800.jpg" data-art-subject="portrait" data-art-media="acrylic" class="artImage"></li>
+    <li><img src="artimages/landscape800x600.jpg" data-art-subject="landscape" data-art-media="watercolor" class="artImage"></li>
+    <li><img src="artimages/portrait600x800.jpg" data-art-subject="portrait" data-art-media="acrylic" class="artImage"></li>
 </ul>
+</div>
 <script type="text/javascript">
-/*Put in the filter here*/
-		$( "li" )
-		  .filter(function( index ) {
-		    return $( "img", this ).data("art-subject") === "landscape";
-		  })
-		    .css( "background-color", "red" );
+/*Wait for all the dom bits to load*/
+$(document).ready(function(){
+/*Create a variable to hold what subject is selected for from the dropdown menu or elsewhere. This will need more logic later.*/
+      var artSubject = 'landscape';
+/*Make a new variable to select the data attribute of the image*/
+      var $artSubject = 'img[data-art-subject=' + artSubject + ']';
+/*in the document hide everything but what is selected in the data attribute*/
+      $("#artWork li img").not($artSubject).parent().remove();
+/*Uncomment if you need to see what variables are being passed.*/
+/*    console.log($artSubject);
+      console.log(artSubject);*/
+        $("#carousel1").tiksluscarousel({width:800,height:600,nav:'thumbnails',current:1});  //called with all default values
+});
+/*whew, working*/
 </script>
-
 </body>
 </html>

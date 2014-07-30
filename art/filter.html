@@ -8,32 +8,66 @@
   <script src="../js/tiksluscarousel.min.js"></script>
 </head>
 <body>
+
+  <nav>
+    <ul>
+      <li><a href="#">Figurines<a/></li>
+      <li><a href="#" data-menu-art-subject="landscape">Landscapes<a/></li>
+      <li><a href="#" data-menu-art-subject="portrait">Portraits<a/></li>
+      <li><a href="#">Animals<a/></li>
+      <li><a href="#">Figures<a/></li>
+      <li><a href="#">Drawings<a/></li>
+      <li><a href="#">Models/3-D<a/></li>
+    </ul>
+  </nav>
 <!-- The chunk of HTML to be filtered -->
-<div id="carousel1">
-<ul id="artWork">
-    <li><img src="artimages/landscape800x600.jpg" data-art-subject="landscape" data-art-media="oil" class="artImage"></li>
-    <li><img src="artimages/portrait600x800.jpg" data-art-subject="portrait" data-art-media="oil" class="artImage"></li>
-    <li><img src="artimages/landscape800x600.jpg" data-art-subject="landscape" data-art-media="oil" class="artImage"></li>
-    <li><img src="artimages/portrait600x800.jpg" data-art-subject="portrait" data-art-media="acrylic" class="artImage"></li>
-    <li><img src="artimages/landscape800x600.jpg" data-art-subject="landscape" data-art-media="watercolor" class="artImage"></li>
-    <li><img src="artimages/portrait600x800.jpg" data-art-subject="portrait" data-art-media="acrylic" class="artImage"></li>
-</ul>
-</div>
+  <div id="carousel1">
+    <ul id="artWork">
+        <li><img src="artimages/orcas.jpg" data-art-subject="landscape" data-art-media="gouache" class="artImage"></li>
+        <li><img src="artimages/orcas2.jpg" data-art-subject="landscape" data-art-media="gouache" class="artImage"></li>
+        <li><img src="artimages/sunset.jpg" data-art-subject="landscape" data-art-media="oil" class="artImage"></li>
+        <li><img src="artimages/portrait600x800.jpg" data-art-subject="portrait" data-art-media="oil" class="artImage"></li>
+        <li><img src="artimages/portrait600x800.jpg" data-art-subject="portrait" data-art-media="acrylic" class="artImage"></li>
+        <li><img src="artimages/portrait600x800.jpg" data-art-subject="portrait" data-art-media="acrylic" class="artImage"></li>
+    </ul>
+  </div>
 <script type="text/javascript">
 /*Wait for all the dom bits to load*/
 $(document).ready(function(){
-/*Create a variable to hold what subject is selected for from the dropdown menu or elsewhere. This will need more logic later.*/
-      var artSubject = 'landscape';
-/*Make a new variable to select the data attribute of the image*/
+/*Create a variable to hold what subject is selected for from the dropdown menu or elsewhere.*/
+      /*var artSubject = $('nav li a').data("art-menu-subject");*/
+      var artSubject = 'portrait';
+/*Make a variable to hold the data-art-subject selector to filter by*/
       var $artSubject = 'img[data-art-subject=' + artSubject + ']';
-/*in the document hide everything but what is selected in the data attribute*/
+      var artDimensions;
+/*Load the correct version of the carousel dimensions based on the subject. add other variables if needed.*/
+      switch (artSubject) {
+        case 'landscape':
+            artWidth = 800;
+            artHeight = 600;
+            break;
+        case 'portrait':
+            artWidth = 600;
+            artHeight = 800;
+            break;
+        case 2:
+            artSubCarousel = "Tuesday";
+            break;
+    };     
+
+
+/*in the DOM remove all list items that do not match the selected data-art-subject attribute*/
       $("#artWork li img").not($artSubject).parent().remove();
 /*Uncomment if you need to see what variables are being passed.*/
 /*    console.log($artSubject);
       console.log(artSubject);*/
-        $("#carousel1").tiksluscarousel({width:800,height:600,nav:'thumbnails',current:1});  //called with all default values
+/*Executes the carousel based on the subject*/
+      $("#carousel1").tiksluscarousel({width:artWidth,height:artHeight,nav:'thumbnails',current:1}); 
+
 });
 /*whew, working*/
+
+
 </script>
 </body>
 </html>

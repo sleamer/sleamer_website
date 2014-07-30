@@ -4,25 +4,27 @@
   <title>Getting Javascript to work</title>
   <link href="../css/tiksluscarousel.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="../css/sleamerstyle.css">
-  <script type="text/javascript" src="https://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.min.js"></script>
+  <script type="text/javascript" src="https://ajax.microsoft.com/ajax/jQuery/jquery-1.4.3.min.js"></script>
   <script src="../js/tiksluscarousel.min.js"></script>
 </head>
 <body>
 
   <nav>
-    <ul>
-      <li><a href="#">Figurines<a/></li>
-      <li><a href="#" data-menu-art-subject="landscape">Landscapes<a/></li>
-      <li><a href="#" data-menu-art-subject="portrait">Portraits<a/></li>
+    <ul id ='artNav'>
+      <li><a href="#landscape" >Landscapes<a/></li>
+      <li><a href="#portrait">Portraits<a/></li>
       <li><a href="#">Animals<a/></li>
       <li><a href="#">Figures<a/></li>
       <li><a href="#">Drawings<a/></li>
       <li><a href="#">Models/3-D<a/></li>
     </ul>
   </nav>
+
+   
 <!-- The chunk of HTML to be filtered -->
   <div id="carousel1">
     <ul id="artWork">
+
         <li><img src="artimages/orcas.jpg" data-art-subject="landscape" data-art-media="gouache" class="artImage"></li>
         <li><img src="artimages/orcas2.jpg" data-art-subject="landscape" data-art-media="gouache" class="artImage"></li>
         <li><img src="artimages/sunset.jpg" data-art-subject="landscape" data-art-media="oil" class="artImage"></li>
@@ -30,16 +32,24 @@
         <li><img src="artimages/portrait600x800.jpg" data-art-subject="portrait" data-art-media="acrylic" class="artImage"></li>
         <li><img src="artimages/portrait600x800.jpg" data-art-subject="portrait" data-art-media="acrylic" class="artImage"></li>
     </ul>
-  </div>
+ 
 <script type="text/javascript">
+
 /*Wait for all the dom bits to load*/
 $(document).ready(function(){
+
 /*Create a variable to hold what subject is selected for from the dropdown menu or elsewhere.*/
-      /*var artSubject = $('nav li a').data("art-menu-subject");*/
-      var artSubject = 'portrait';
+/*The carousel is too tall because of the loading of the default portait size.  Keeps it for landscape. */ 
+      var artSubject = 'landscape';
 /*Make a variable to hold the data-art-subject selector to filter by*/
       var $artSubject = 'img[data-art-subject=' + artSubject + ']';
-      var artDimensions;
+
+/*in the DOM remove all list items that do not match the selected data-art-subject attribute*/
+      $("#artWork li img").not($artSubject).parent().remove();
+      var artWidth = 0;
+      var artHeight = 0;
+
+
 /*Load the correct version of the carousel dimensions based on the subject. add other variables if needed.*/
       switch (artSubject) {
         case 'landscape':
@@ -50,24 +60,20 @@ $(document).ready(function(){
             artWidth = 600;
             artHeight = 800;
             break;
-        case 2:
-            artSubCarousel = "Tuesday";
-            break;
     };     
 
-
-/*in the DOM remove all list items that do not match the selected data-art-subject attribute*/
-      $("#artWork li img").not($artSubject).parent().remove();
 /*Uncomment if you need to see what variables are being passed.*/
-/*    console.log($artSubject);
-      console.log(artSubject);*/
+/*    console.log($artSubject);*/
+      console.log(artSubject);
+      console.log(artWidth);
+      console.log(artHeight);
+
 /*Executes the carousel based on the subject*/
       $("#carousel1").tiksluscarousel({width:artWidth,height:artHeight,nav:'thumbnails',current:1}); 
 
 });
 /*whew, working*/
-
-
 </script>
+ </div>
 </body>
 </html>

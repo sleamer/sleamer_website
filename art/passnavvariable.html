@@ -1,0 +1,84 @@
+
+<html>
+<head>
+  <title>Getting Javascript to work</title>
+
+  <link rel="stylesheet" type="text/css" href="../css/sleamerstyle.css">
+  <link href="../css/tiksluscarousel.css" rel="stylesheet">
+  <script type="text/javascript" src="https://ajax.microsoft.com/ajax/jQuery/jquery-1.4.3.min.js"></script>
+</head>
+<body>
+
+  <nav>
+    <ul id ='artNav'>
+      <li><a href="#landscape" data-artNav-subject="landscape">Landscapes</a></li>
+      <li><a href="#portrait">Portraits</a></li>
+      <li><a href="#animal">Animals</a></li>
+      <li><a href="#figure">Figures</a></li>
+      <li><a href="#drawing">Drawings</a></li>
+      <li><a href="#model">Models/3-D</a></li>
+    </ul>
+  </nav>
+
+  <div class="artImageProxy" id='landscape'>Landscape</div>
+  <div class="artImageProxy" id='portrait'>Portraits</div>
+  <div class="artImageProxy" id='animal'>Animals</div>
+  <div class="artImageProxy" id='figure'>Figures</div>
+  <div class="artImageProxy" id='drawing'>Drawings</div>
+  <div class="artImageProxy" id='model'>Models</div>
+<div class='break'><br></div>
+<div class='break'><br></div>
+<div class='break'><br></div>
+<div class='break'><br></div>
+<div class='break'><br></div>
+<div class='break'><br></div>
+<div class='break'><br></div>
+<div class='break'><br></div>
+<div class='break'><br></div>
+<div class="lonelyBreak" id = "break1">Break1<br></div>
+<div class="lonelyBreak" id = "break2">Break2<br></div>
+<div class="lonelyBreak" id = "break3">Break3<br></div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div id="artTest">
+  I am artTest's contents
+</div>
+<div id="artTestTwo">
+  I am artTestTwo's contents
+</div>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#artTest').addClass('artImageProxy bubba').add( "p" ).css( "background-color", "blue" );
+        $('#artTestTwo').addClass('bubba').after('<p>sexy!</p>');
+        $('.break').append("hey").after('<p>you!</p>');
+        $( "<p>Test</p>" ).appendTo( ".lonelyBreak" );
+        var $whatIsInArtNav = $('#artNav li a').data('artNav-subject');
+        console.log($whatIsInArtNav);
+    });
+
+
+</script>
+
+
+</body>
+</html>

@@ -11,72 +11,56 @@
 
   <nav>
     <ul id ='artNav'>
-      <li><a href="#landscape" data-artNav-subject="landscape">Landscapes</a></li>
-      <li><a href="#portrait">Portraits</a></li>
-      <li><a href="#animal">Animals</a></li>
-      <li><a href="#figure">Figures</a></li>
-      <li><a href="#drawing">Drawings</a></li>
-      <li><a href="#model">Models/3-D</a></li>
+      <li><a href="#portraits" data-artNav-subject="portrait">Portraits</a></li>
+      <li><a href="#landscapes" data-artNav-subject="landscape">Landscapes</a></li>
+      <li><a href="#animals" data-artNav-subject="animal">Animals</a></li>
+      <li><a href="#figures" data-artNav-subject="figure">Figures</a></li>
+      <li><a href="#drawings" data-artNav-subject="drawing">Drawings</a></li>
+      <li><a href="#models" data-artNav-subject="model">Models/3-D</a></li>
     </ul>
   </nav>
 
-  <div class="artImageProxy" id='landscape'>Landscape</div>
-  <div class="artImageProxy" id='portrait'>Portraits</div>
-  <div class="artImageProxy" id='animal'>Animals</div>
-  <div class="artImageProxy" id='figure'>Figures</div>
-  <div class="artImageProxy" id='drawing'>Drawings</div>
-  <div class="artImageProxy" id='model'>Models</div>
-<div class='break'><br></div>
-<div class='break'><br></div>
-<div class='break'><br></div>
-<div class='break'><br></div>
-<div class='break'><br></div>
-<div class='break'><br></div>
-<div class='break'><br></div>
-<div class='break'><br></div>
-<div class='break'><br></div>
-<div class="lonelyBreak" id = "break1">Break1<br></div>
-<div class="lonelyBreak" id = "break2">Break2<br></div>
-<div class="lonelyBreak" id = "break3">Break3<br></div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<div id="artTest">
-  I am artTest's contents
-</div>
-<div id="artTestTwo">
-  I am artTestTwo's contents
-</div>
+
+<!-- List of Art images -->
+  <div id="carousel1">
+    <ul id="artWork">
+        <li><img src="artimages/orcas.jpg" data-art-subject="landscape" data-art-media="gouache" class="artImage"></li>
+        <li><img src="artimages/orcas2.jpg" data-art-subject="landscape" data-art-media="gouache" class="artImage"></li>
+        <li><img src="artimages/sunset.jpg" data-art-subject="landscape" data-art-media="oil" class="artImage"></li>
+        <li><img src="artimages/portrait600x800.jpg" data-art-subject="portrait" data-art-media="oil" class="artImage"></li>
+        <li><img src="artimages/portrait600x800.jpg" data-art-subject="portrait" data-art-media="acrylic" class="artImage"></li>
+        <li><img src="artimages/portrait600x800.jpg" data-art-subject="portrait" data-art-media="acrylic" class="artImage"></li>
+    </ul>
+   </div>
+<!-- /List of Art images -->
+
+
+
 <script type="text/javascript">
     $(document).ready(function(){
-        $('#artTest').addClass('artImageProxy bubba').add( "p" ).css( "background-color", "blue" );
-        $('#artTestTwo').addClass('bubba').after('<p>sexy!</p>');
-        $('.break').append("hey").after('<p>you!</p>');
-        $( "<p>Test</p>" ).appendTo( ".lonelyBreak" );
-        var $whatIsInArtNav = $('#artNav li a').data('artNav-subject');
-        console.log($whatIsInArtNav);
-    });
+          $('#artNav li a').click(function(){
+              $artSubject = $(this).data('artNav-subject');
+              /*Remove all Image list items that do not match Art Subject clicked on*/
+              $("#artWork li img").not('img[data-art-subject=' + $artSubject + ']').parent().hide();
+              switch ($artSubject) {
+               case 'landscape':
+                   var artWidth = 800;
+                   var artHeight = 600;
+                   break;
+               case 'portrait':
+                   var artWidth = 600;
+                   var artHeight = 800;
+                   break;
+              }; /*end switch*/
+              console.log('This is in the inner ' + $artSubject);
+              console.log('This width: ' + artWidth);
+              console.log('This height: ' + artHeight);
 
+              /*Executes the carousel based on the subject*/
 
+          });
+      $("#carousel1").tiksluscarousel({width:artWidth,height:artHeight,nav:'thumbnails',current:1}); /*        */
+     });
 </script>
 
 

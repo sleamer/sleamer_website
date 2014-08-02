@@ -1,57 +1,90 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<link href="../css/tiksluscarousel.css" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="../css/sleamerstyle.css">
-		<script type="text/javascript" src="https://ajax.microsoft.com/ajax/jQuery/jquery-1.4.3.min.js"></script>
-		<script src="../js/tiksluscarousel.min.js"></script>
-		<title>Seth Leamer - Portfolio</title>
-	</head>
+
+<html>
+<head>
+  <title>Sleamer Art Portfolio</title>
+
+  <link rel="stylesheet" type="text/css" href="../css/sleamerstyle.css">
+  <link href="../css/tiksluscarousel.css" rel="stylesheet">
+  <script type="text/javascript" src="https://ajax.microsoft.com/ajax/jQuery/jquery-1.4.3.min.js"></script>
+  <script src="../js/tiksluscarousel.min.js"></script>
+</head>
 <body>
 
-<h1>Seth Leamer</h1>
-<p>Works</p>
-<ul>
-	<li><a href="#">Figurines<a/></li>
-	<li><a href="#">Landscapes<a/></li>
-	<li><a href="#">Animals<a/></li>
-	<li><a href="#">Figures<a/></li>
-	<li><a href="#">Drawings<a/></li>
-	<li><a href="#">Models/3-D<a/></li>
-</ul>
-	<div id="carousel1">
-		<ul>
-			<li><img src="artimages/bobafett.jpg" data-sleamer-art="figurine"></li>
-			<li><img src="artimages/bobar5d4.jpg" data-sleamer-art="figurine"></li>
-			<li><img src="artimages/bossk.jpg" data-sleamer-art="figurine"></li>
-			<li><img src="artimages/bosskboba.jpg" data-sleamer-art="figurine"></li>
-			<li><img src="artimages/chewbacca.jpg" data-sleamer-art="figurine"></li>
-			<li><img src="artimages/chewbaccaboba.jpg" data-sleamer-art="figurine"></li>
-			<li><img src="artimages/familyportrait.jpg" data-sleamer-art="figurine"></li>
-			<li><img src="artimages/leia.jpg" data-sleamer-art="figurine"></li>
-			<li><img src="artimages/leiaboba.jpg" data-sleamer-art="figurine"></li>
-			<li><img src="artimages/papasmurf_r5d4.jpg" data-sleamer-art="figurine"></li>
-			<li><img src="artimages/r2d2.jpg" data-sleamer-art="figurine"></li>
-			<li><img src="artimages/r5d4.jpg" data-sleamer-art="figurine"></li>
-			<li><img src="artimages/orcas.jpg" data-sleamer-art="landscape gouache"></li>
-			<li><img src="artimages/orcas2.jpg" data-sleamer-art="landscape gouache"></li>
-			<li><img src="artimages/sunset.jpg" data-sleamer-art="landscape"></li>
-			<li><img src="artimages/kaminske.jpg" data-sleamer-art="landscape"></li>
-			<li><img src="artimages/desk.jpg" data-sleamer-art="interior gouache"></li>
-			<li><img src="artimages/medford.jpg" data-sleamer-art="interior"></li>
-			<li><img src="artimages/bedroom.jpg" data-sleamer-art="interior"></li>
-		</ul>
-	</div>
-<script language="javascript">
-	$(document).ready(function(){
-	$("#carousel1").tiksluscarousel({width:800,height:600,nav:'thumbnails',current:1});  //called with all default values
-	});
+<!-- Navigation -->
+  <nav>
+    <ul id ='artNav'>
+      <li><a href="#landscapes" data-artNav-subject="landscape">Landscapes</a></li>
+      <li><a href="#portraits" data-artNav-subject="portrait">Portraits</a></li>
+      <li><a href="#animals" data-artNav-subject="animal">Animals</a></li>
+      <li><a href="#figures" data-artNav-subject="figure">Figures</a></li>
+      <li><a href="#drawings" data-artNav-subject="drawing">Drawings</a></li>
+      <li><a href="#models" data-artNav-subject="model">Models/3-D</a></li>
+    </ul>
+  </nav>
+<!-- /Navigation-->
+
+<!-- List of Art images -->
+  <div id="carousel1">
+    <ul id="artWork">
+        <li><img src="artimages/orcas.jpg" data-art-subject="landscape" data-art-media="gouache"></li>
+        <li><img src="artimages/orcas2.jpg" data-art-subject="landscape" data-art-media="gouache"></li>
+        <li><img src="artimages/sunset.jpg" data-art-subject="landscape" data-art-media="oil"></li>
+        <li><img src="artimages/portrait600x800.jpg" data-art-subject="portrait" data-art-media="oil"></li>
+        <li><img src="artimages/portrait600x800.jpg" data-art-subject="portrait" data-art-media="acrylic"></li>
+        <li><img src="artimages/portrait600x800.jpg" data-art-subject="portrait" data-art-media="acrylic"></li>
+    </ul>
+   </div>
+<!-- /List of Art images -->
+
+<script type="text/javascript">
+/*DOM load function*/
+$(document).ready(function(){
+
+
+	/*Default Attributes for Carousel*/
+     var artSubject = 'landscape';
+     var artWidth = 800;
+     var artHeight = 600;
+
+
+
+     /*Variable that holds the data-art-subject selector to filter by*/     
+/*     var $filterArtSubject = 'img[data-art-subject=' + artSubject + ']'; 
+*/
+   
+     console.log(artSubject); 
+/*Load the correct version of the carousel dimensions based on the artSubject. add other variables if needed.*/
+     switch (artSubject) {
+       case 'landscape':
+           artWidth = 800;
+           artHeight = 600;
+           break;
+       case 'portrait':
+           artWidth = 600;
+           artHeight = 800;
+           break;
+      };
+	
+
+   	/*Remove all Image list items that do not match Art Subject*/
+     $("#artWork li img").not('img[data-art-subject=' + artSubject + ']').parent().remove();
+
+     $("#carousel1").tiksluscarousel({width:artWidth,height:artHeight,nav:'thumbnails',current:1}); 
+
+}); /*/DOM load function*/
+
+
 </script>
-
-<p>sleamer-artist</p>
-
-
-<footer>contact</footer>
+/*Bind the function to the data click in the navigation */
+   var artSubject = $( "#artNav li a" ).bind( "click", function() {
+  		return ($( this ).data('artNav-subject')) ;
+  	});
 </body>
 </html>
+
+
+
+
+
+
+

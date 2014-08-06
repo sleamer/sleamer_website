@@ -1,9 +1,21 @@
-/* line 2, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
+/* line 1, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
+body {
+  /* 	SAL: Need to fix this for smaller screens */
+  padding-top: 60px;
+}
+
+@media screen and (max-width: 768px) {
+  /* line 6, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
+  body {
+    padding-top: 60px;
+  }
+}
+/* line 9, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
 .container {
   border: 1px solid black;
 }
 
-/* line 6, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
+/* line 13, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
 .row {
   border: 1px solid red;
 }

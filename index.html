@@ -21,15 +21,15 @@
 <!--     SAL: Personal Styles -->
    	<link rel="stylesheet" type="text/css" href="css/sleamerstyle.css">
   </head>
-
+  <body>
 
    <!-- NAVBAR
 ================================================== -->
-  <body>
+
     <div class="navbar-wrapper">
       <div class="container">
 
-        <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation"><!-- SAL: non-fixed nav = navbar-static-top -->
           <div class="container">
             <div class="navbar-header">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -46,15 +46,16 @@
                 <li><a href="#">Web Development</a></li>
                 <li><a href="#">Murals</a></li>
                 <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Fine Art <span class="caret"></span></a>
+                  <a href="art/art.html" class="dropdown-toggle" data-toggle="dropdown">Fine Art <span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu">
-                    <li class="dropdown-header">Subject Matter</li>
+                  	<li><a href="art/art.html">All Work</a></li>
+                    <li class="dropdown-header">By Subject Matter</li>
                     <li><a href="#">Action Figures</a></li>
                     <li><a href="#">Landscapes</a></li>
                     <li><a href="#">Animals</a></li>
                     <li><a href="#">Figures/Portriats</a></li>
                     <li class="divider"></li>
-                    <li class="dropdown-header">Medium</li>
+                    <li class="dropdown-header">By Medium</li>
                     <li><a href="#">3-D</a></li>
                     <li><a href="#">Acrylic</a></li>
                     <li><a href="#">Oil</a></li>
@@ -76,8 +77,8 @@
 
     <!-- Carousel
     ================================================== -->
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
+    <!-- <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
       <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -117,7 +118,7 @@
       </div>
       <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
       <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-    </div><!-- /.carousel -->
+    </div> --><!-- /.carousel -->
 
 
 
@@ -215,8 +216,12 @@
 
 
     <!-- jQuery include -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
+<!--     SAL Added smooth scrolling ref=https://github.com/kswedberg/jquery-smooth-scroll -->
+    <script src="js/jquery.smooth-scroll.min.js" type="text/javascript" ></script>
     <!-- Bootstraps's javaScript-->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <!-- SAL: Custom script -->
+    <script src="js/sleamer.js" type="text/javascript"></script>
   </body>
 </html>

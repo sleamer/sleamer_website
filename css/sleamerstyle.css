@@ -1,0 +1,9 @@
+/* line 2, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
+.container {
+  border: 1px solid black;
+}
+
+/* line 6, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
+.row {
+  border: 1px solid red;
+}

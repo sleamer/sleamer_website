@@ -1,3 +1,11 @@
+/*#7F8A63  */
+/*  */
+/* #fff */
+/*#200808  */
+/* $gray-light */
+/* SAL: changed from #222 */
+/* $gray-light */
+/* #fff */
 /* normalize.css v3.0.1 | MIT License | git.io/normalize */
 /* line 9, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/bootstrap/_normalize.scss */
 html {
@@ -1410,7 +1418,7 @@ body {
   font-size: 14px;
   line-height: 1.42857;
   color: #333333;
-  background-color: white;
+  background-color: #423526;
 }
 
 /* line 39, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/bootstrap/_scaffolding.scss */
@@ -1467,7 +1475,7 @@ img {
 .img-thumbnail {
   padding: 4px;
   line-height: 1.42857;
-  background-color: white;
+  background-color: #423526;
   border: 1px solid #dddddd;
   border-radius: 4px;
   -webkit-transition: all 0.2s ease-in-out;
@@ -3197,7 +3205,7 @@ th {
 }
 /* line 56, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/bootstrap/_tables.scss */
 .table .table {
-  background-color: white;
+  background-color: #423526;
 }
 
 /* line 70, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/bootstrap/_tables.scss */
@@ -4071,14 +4079,14 @@ select[multiple].input-lg,
 /* line 57, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/bootstrap/_buttons.scss */
 .btn-default {
   color: #333333;
-  background-color: white;
-  border-color: #cccccc;
+  background-color: #7f8a63;
+  border-color: #b0b89b;
 }
 /* line 15, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/bootstrap/mixins/_buttons.scss */
 .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open > .btn-default.dropdown-toggle {
   color: #333333;
-  background-color: #e6e6e6;
-  border-color: #adadad;
+  background-color: #646c4e;
+  border-color: #939e78;
 }
 /* line 22, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/bootstrap/mixins/_buttons.scss */
 .btn-default:active, .btn-default.active, .open > .btn-default.dropdown-toggle {
@@ -4086,12 +4094,12 @@ select[multiple].input-lg,
 }
 /* line 32, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/bootstrap/mixins/_buttons.scss */
 .btn-default.disabled, .btn-default.disabled:hover, .btn-default.disabled:focus, .btn-default.disabled:active, .btn-default.disabled.active, .btn-default[disabled], .btn-default[disabled]:hover, .btn-default[disabled]:focus, .btn-default[disabled]:active, .btn-default[disabled].active, fieldset[disabled] .btn-default, fieldset[disabled] .btn-default:hover, fieldset[disabled] .btn-default:focus, fieldset[disabled] .btn-default:active, fieldset[disabled] .btn-default.active {
-  background-color: white;
-  border-color: #cccccc;
+  background-color: #7f8a63;
+  border-color: #b0b89b;
 }
 /* line 38, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/bootstrap/mixins/_buttons.scss */
 .btn-default .badge {
-  color: white;
+  color: #7f8a63;
   background-color: #333333;
 }
 
@@ -4981,7 +4989,7 @@ tbody.collapse.in {
 /* line 98, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/bootstrap/_navs.scss */
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
   color: #555555;
-  background-color: white;
+  background-color: #423526;
   border: 1px solid #dddddd;
   border-bottom-color: transparent;
   cursor: default;
@@ -5074,7 +5082,7 @@ tbody.collapse.in {
   .nav-tabs.nav-justified > .active > a:hover,
   .nav-tabs-justified > .active > a:focus,
   .nav-tabs.nav-justified > .active > a:focus {
-    border-bottom-color: white;
+    border-bottom-color: #423526;
   }
 }
 
@@ -5562,12 +5570,12 @@ tbody.collapse.in {
 
 /* line 528, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-inverse {
-  background-color: #222222;
-  border-color: #090909;
+  background-color: #200808;
+  border-color: black;
 }
 /* line 532, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-inverse .navbar-brand {
-  color: #777777;
+  color: #7f8a63;
 }
 /* line 535, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand:focus {
@@ -5576,21 +5584,21 @@ tbody.collapse.in {
 }
 /* line 541, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-inverse .navbar-text {
-  color: #777777;
+  color: #7f8a63;
 }
 /* line 546, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-inverse .navbar-nav > li > a {
-  color: #777777;
+  color: #7f8a63;
 }
 /* line 550, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
-  color: white;
+  color: #b0b89b;
   background-color: transparent;
 }
 /* line 558, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
-  color: white;
-  background-color: #090909;
+  color: #b0b89b;
+  background-color: black;
 }
 /* line 566, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-inverse .navbar-nav > .disabled > a, .navbar-inverse .navbar-nav > .disabled > a:hover, .navbar-inverse .navbar-nav > .disabled > a:focus {
@@ -5612,35 +5620,35 @@ tbody.collapse.in {
 /* line 586, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-inverse .navbar-collapse,
 .navbar-inverse .navbar-form {
-  border-color: #101010;
+  border-color: #030101;
 }
 /* line 595, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
-  background-color: #090909;
-  color: white;
+  background-color: black;
+  color: #b0b89b;
 }
 @media (max-width: 767px) {
   /* line 604, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-inverse .navbar-nav .open .dropdown-menu > .dropdown-header {
-    border-color: #090909;
+    border-color: black;
   }
   /* line 607, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-inverse .navbar-nav .open .dropdown-menu .divider {
-    background-color: #090909;
+    background-color: black;
   }
   /* line 610, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
-    color: #777777;
+    color: #7f8a63;
   }
   /* line 613, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: white;
+    color: #b0b89b;
     background-color: transparent;
   }
   /* line 621, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a, .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:focus {
-    color: white;
-    background-color: #090909;
+    color: #b0b89b;
+    background-color: black;
   }
   /* line 629, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a, .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:focus {
@@ -5650,19 +5658,19 @@ tbody.collapse.in {
 }
 /* line 638, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-inverse .navbar-link {
-  color: #777777;
+  color: #7f8a63;
 }
 /* line 640, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-inverse .navbar-link:hover {
-  color: white;
+  color: #b0b89b;
 }
 /* line 645, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-inverse .btn-link {
-  color: #777777;
+  color: #7f8a63;
 }
 /* line 648, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-inverse .btn-link:hover, .navbar-inverse .btn-link:focus {
-  color: white;
+  color: #b0b89b;
 }
 /* line 654, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-inverse .btn-link[disabled]:hover, .navbar-inverse .btn-link[disabled]:focus, fieldset[disabled] .navbar-inverse .btn-link:hover, fieldset[disabled] .navbar-inverse .btn-link:focus {
@@ -6038,7 +6046,7 @@ a.badge:hover, a.badge:focus {
   padding: 4px;
   margin-bottom: 20px;
   line-height: 1.42857;
-  background-color: white;
+  background-color: #423526;
   border: 1px solid #dddddd;
   border-radius: 4px;
   -webkit-transition: all 0.2s ease-in-out;

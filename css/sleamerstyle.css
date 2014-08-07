@@ -1,7 +1,8 @@
 /* line 1, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
 body {
+  background: #423526;
   /* 	SAL: Need to fix this for smaller screens */
-  padding-top: 60px;
+  padding-top: 180px;
 }
 
 @media screen and (max-width: 768px) {
@@ -10,12 +11,17 @@ body {
     padding-top: 60px;
   }
 }
-/* line 9, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
-.container {
-  border: 1px solid black;
+/* line 11, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
+.home-portal-img {
+  width: 200px;
+  height: 200px;
 }
 
-/* line 13, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
-.row {
-  border: 1px solid red;
+/* .container {
+
+	border: 1px solid black;
 }
+.row {
+
+	border: 1px solid red;
+} */

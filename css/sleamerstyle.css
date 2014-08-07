@@ -17,6 +17,22 @@ body {
   height: 200px;
 }
 
+/* SAL: for the love of god could not find what variable controls these in _variables.scss */
+/* line 19, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
+h2 {
+  color: #200808;
+}
+
+/* line 23, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
+p {
+  color: #7F8A63;
+}
+
+/* line 29, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
+hr.featurette-divider {
+  border-color: #200808;
+}
+
 /* .container {
 
 	border: 1px solid black;

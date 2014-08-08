@@ -18,18 +18,19 @@
 
 <!-- SAL: Bootstrap Carousel CSS -->
    	<link rel="stylesheet" type="text/css" href="css/carousel.css">
+<!-- SAL: This activates the scrollspy navigation -->
+    <link href="css/navbar-fixed-top.css" rel="stylesheet">
 <!--     SAL: Personal Styles -->
    	<link rel="stylesheet" type="text/css" href="css/sleamerstyle.css">
   </head>
-  <body>
+  <body data-spy="scroll" data-target="#scrolling">
 
    <!-- NAVBAR
 ================================================== -->
-
     <div class="navbar-wrapper">
       <div class="container">
-
-        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation"><!-- SAL: non-fixed nav = navbar-static-top -->
+<!-- SAL: Fixed nav = navbar-static-top -->
+        <nav id="scrolling" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
           <div class="container">
             <div class="navbar-header">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -69,7 +70,7 @@
               </ul>
             </div>
           </div>
-        </div>
+        </nav>
 
       </div>
     </div>
@@ -91,7 +92,7 @@
           <img class="img-circle home-portal-img" src="images/code_snippit_homepage.jpg" alt="Code Snippit">
           <h2>Web Development</h2>
           <p>Yup I need copy here, and a link to my web portfolio -- could be same page?</p>
-          <p><a class="btn btn-default" href="#webdev" role="button">Execute Here &raquo;</a></p>
+          <p><a class="btn btn-default" href="#webdev" role="button">Execute Command &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
           <img class="img-circle home-portal-img" src="images/van_cows_homepage.jpg" alt="Cow Mural">
@@ -115,12 +116,19 @@
       <div class="row featurette" id="about">
         <div class="col-md-7">
           <h2 class="featurette-heading">About me</h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-          <br>
-          <br>
+          <p>I am a Web Developer/Artist hybrid who is drawn to projects that integrate technical and aesthetic skills.  
+
+			<p>Artistically, I have over ten years of applied artistic retail experience creating and directing the installation of hundreds of murals, paintings, displays, and sculptures that effectively market a wide range of products while creating a memorable experience for the consumer.</p>
+			 
+			<p>Technically, I have strong project management experience coupled with robust frontend coding skills (HTML, CSS3, JavaScript) and an ever-increasing backend knowledge base. I spent several years as a project manager/developer in the early 2000's and recently went back to school to update my repertoire.</p>   
+
+			<p>Combined this allows me to navigate through a online project's lifecyle-  understanding disparate requirements, executing challenging code, and delivering attractive websites.</p>
+
+			<p>Here's my <a href="resume.html" id="homeresumeLink">resume</a> if you're interested</p>
+
         </div>
         <div class="col-md-5">
-          <img class="featurette-image img-responsive img-rounded" src="images/me_homepage.jpg" alt="Me at the color chart -- Photo by Torres.">
+          <img class="featurette-image img-responsive img-rounded" src="images/me_homepage.jpg" alt="Me at the color chart -- Photo by Sam Torres.">Photo by Sam Torres
         </div>
       </div>
 
@@ -130,7 +138,34 @@
       <div class="row featurette" id="contact">
         <div class="col-md-7">
           <h2 class="featurette-heading">Contact</h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          <p class="lead"> Drop me a line.  Tell me your thoughts.</p>
+          	<!-- SAL: contact form -->
+          	<!-- SAL: reference this https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input if confused -->
+          	<form action method="get" class="form-horizontal">
+          		<fieldset>
+<!--           		<legend>Your info</legend> -->
+		          		<label for="contact_email">Email:</label>
+		          		<input type="email" class="form-control" id="contact_email" name"contact_email">
+		          		<label for="contact_name">Name:</label>
+		          		<input type="text" class="form-control" id="contact_name" name"contact_name">
+          		</fieldset>
+          		<br>	
+          		<fieldset>
+		          		<label>Whatcha want to talk about?</label><br>
+			          		<input type="radio" id="contact_radio_webdev" value="web_dev" name="interest"> <label for="contact_web_dev">Web Development</label><br>
+			          		<input type="radio" id="contact_radio_murals" value="murals" name="interest"> <label for="contact_murals"> Murals</label><br>
+			          		<input type="radio" id="contact_radio_art" value="fine_art" name="interest"> <label for="contact_fine_art"> Fine Art</label><br>
+			          		<br>
+		          		<label for="contact_note">Scrawl your note here:</label>
+			          		<textarea class="form-control" id="contact_note" name"contact_note">
+			          		</textarea>
+          		</fieldset>
+          		<br>
+          		<button class="btn btn-default" type="submit">Drop a line</button>
+          		<button class="btn btn-default" type="reset">Aw, Fuhget about it</button>
+			</form>
+			<!-- /SAL: contact form -->
+
         </div>
         <div class="col-md-5">
           <img class="featurette-image img-responsive img-rounded" src="images/contact_homepage.jpg" alt="sketchbook">

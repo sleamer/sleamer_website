@@ -45,10 +45,12 @@
               <ul class="nav navbar-nav">
                 <li class="active"><a href="#">Home</a></li>
                 <li><a href="#webdev">Web Development</a></li>
-                <li><a href="#">Murals</a></li>
-                <li class="dropdown">
-                  <a href="art/art.html" class="dropdown-toggle" data-toggle="dropdown">Fine Art <span class="caret"></span></a>
-                  <ul class="dropdown-menu" role="menu">
+                <li><a href="http://www.trumpetmurals.com">Murals</a></li>
+                
+<!--                 SAL:  Add art filtering from nav later -->
+                <li><!-- class="dropdown" -->
+                  <a href="art.html">Fine Art<!--  <span class="caret"> --><!-- </span> --></a><!-- data-toggle="dropdown" class="dropdown-toggle" -->
+                  <!-- <ul class="dropdown-menu" role="menu">
                   	<li><a href="art/art.html">All Work</a></li>
                     <li class="dropdown-header">By Subject Matter</li>
                     <li><a href="#">Action Figures</a></li>
@@ -62,7 +64,7 @@
                     <li><a href="#">Oil</a></li>
                     <li><a href="#">Gouache/Watercolor</a></li>
                     <li><a href="#">Drawing</a></li>
-                  </ul>
+                  </ul> -->
                 </li>
 
                 <li><a href="#about">About</a></li>
@@ -91,20 +93,20 @@
         <div class="col-lg-4">
           <img class="img-circle home-portal-img" src="images/code_snippit_homepage.jpg" alt="Code Snippit">
           <h2>Web Development</h2>
-          <p>Yup I need copy here, and a link to my web portfolio -- could be same page?</p>
+          <p>Ya know, HTML, CSS, Javascript, and all their buddies that make the web great.</p>
           <p><a class="btn btn-default" href="#webdev" role="button">Execute Command &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
           <img class="img-circle home-portal-img" src="images/van_cows_homepage.jpg" alt="Cow Mural">
           <h2>Murals</h2>
           <p>This should transition over to trumpet murals.</p>
-          <p><a class="btn btn-default" href="#" role="button">Mosey On Over &raquo;</a></p>
+          <p><a class="btn btn-default" href="http://www.trumpetmurals.com" role="button">Mosey On Over &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img class="img-circle home-portal-img" src="art/artimages/orcas.jpg" alt="Orcas Woods">
+          <img class="img-circle home-portal-img" src="images/orcas.jpg" alt="Orcas Woods">
           <h2>Fine Art</h2>
           <p>This will go to a page of an image carousel that showcases artworks by category</p>
-          <p><a class="btn btn-default" href="#" role="button">Wander In &raquo;</a></p>
+          <p><a class="btn btn-default" href="art.html" role="button">Wander In &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
 
@@ -138,31 +140,46 @@
       <div class="row featurette" id="contact">
         <div class="col-md-7">
           <h2 class="featurette-heading">Contact</h2>
-          <p class="lead"> Drop me a line.  Tell me your thoughts.</p>
+          <p class="lead">Send a virtual hello and tell me what's up.</p>
           	<!-- SAL: contact form -->
           	<!-- SAL: reference this https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input if confused -->
-          	<form action method="get" class="form-horizontal">
-          		<fieldset>
-<!--           		<legend>Your info</legend> -->
+          	<form action method="get" class="form-horizontal" role="form">
+          		<div class="row">
+          			<div class="col-md-6">
+					<!-- <div class="form-group"> -->
 		          		<label for="contact_email">Email:</label>
 		          		<input type="email" class="form-control" id="contact_email" name"contact_email">
+		          	</div>
+		          	<div class="col-md-6">
 		          		<label for="contact_name">Name:</label>
 		          		<input type="text" class="form-control" id="contact_name" name"contact_name">
-          		</fieldset>
-          		<br>	
-          		<fieldset>
+		         	</div>
+		         	<!-- </div> -->
+		        </div>
+		        <div class="row">
+          			<div class="col-md-6">
+          				<br>
 		          		<label>Whatcha want to talk about?</label><br>
 			          		<input type="radio" id="contact_radio_webdev" value="web_dev" name="interest"> <label for="contact_web_dev">Web Development</label><br>
 			          		<input type="radio" id="contact_radio_murals" value="murals" name="interest"> <label for="contact_murals"> Murals</label><br>
 			          		<input type="radio" id="contact_radio_art" value="fine_art" name="interest"> <label for="contact_fine_art"> Fine Art</label><br>
-			          		<br>
+			        </div>
+          			<div class="col-md-6">
+          				<br>
 		          		<label for="contact_note">Scrawl your note here:</label>
 			          		<textarea class="form-control" id="contact_note" name"contact_note">
 			          		</textarea>
-          		</fieldset>
-          		<br>
-          		<button class="btn btn-default" type="submit">Drop a line</button>
-          		<button class="btn btn-default" type="reset">Aw, Fuhget about it</button>
+          			</div>
+          		</div>
+          		<div class="row">
+          			<div class="col-md-5 col-md-offset-7">
+          				<br>
+          				<br>
+          				<button class="btn btn-default" type="submit">Drop a line</button>
+          				<button class="btn btn-default" type="reset">Aw, Fuhget about it</button>
+
+          			</div>
+          		</div>
 			</form>
 			<!-- /SAL: contact form -->
 
@@ -186,32 +203,32 @@
       </ol>
       <div class="carousel-inner">
         <div class="item active">
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAGZmZgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
+          <img src="images/code_snippit_homepage.jpg" alt="First slide">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Website #1</h1>
-              <p>I should list all the skills I used to complete this project</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">checkout the site</a></p>
+              <h1>Skills</h1>
+              <p>HTML, CSS3, SASS, Bootstrap, JavaScript, jQuery, WordPress, Adobe Suite etc..</p>
+              <p><a class="btn btn-lg btn-primary" href="resume.html" role="button">My Resume</a></p>
             </div>
           </div>
         </div>
         <div class="item">
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAGZmZgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
+          <img src="images/code_snippit_homepage.jpg" alt="Second slide">
           <div class="container">
             <div class="carousel-caption">
               <h1>Another example headline.</h1>
               <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+              <p><a class="btn btn-lg btn-primary" href="resume.html" role="button">My Resume Again</a></p>
             </div>
           </div>
         </div>
         <div class="item">
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAFVVVQAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+          <img src="images/code_snippit_homepage.jpg" alt="Third slide">
           <div class="container">
             <div class="carousel-caption">
               <h1>One more for good measure.</h1>
               <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+              <p><a class="btn btn-lg btn-primary" href="resume.html" role="button">And one last time, My Resume</a></p>
             </div>
           </div>
         </div>

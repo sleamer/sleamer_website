@@ -89,10 +89,13 @@
 /*This function does all the nav events*/
                   function artNavSelection (navArtSubject) {
                     switch(navArtSubject) {
-                        
+
                       case 'figurine':
                               if (figurineFiltered === false) {
-                                    $('.filtering').slickUnfilter();
+/*                                    $('.filtering').slickUnfilter(function(navArtSubject){
+                                          MAYBE SOMETHING HERE?
+
+                                          });*/
                                     $('.filtering').slickFilter('[data-art-subject="' + navArtSubject + '"]');  
                                     figurineFiltered = true;
                                     console.log(navArtSubject);

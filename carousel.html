@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+     <!-- Bootstrap -->
+    <link href="css/bootstrap_sleamer.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css">
+    <!--     SAL: Personal Styles -->
+    <link rel="stylesheet" type="text/css" href="css/sleamerstyle.css">
+  </head>
+  <body class="regular_body">
+
+<h2>Filtering</h2>      
+                        <div class="filter">
+                              <ul class="nav nav-pills" role="tablist">
+                                <li class="active"><a href="#">All</a></li>
+                                <li class="artSubjectNav"><a href="javascript:void(0)" class="button js-filter" data-art-subject="landscape">Landscapes</a></li>
+                                <li class="artSubjectNav"><a href="javascript:void(0)" class="button js-filter" data-art-subject="figure">Figures</a></li>
+                                <li class="artSubjectNav"><a href="javascript:void(0)" class="button js-filter" data-art-subject="portrait">Portraits</a></li>
+                                <li class="artSubjectNav"><a href="javascript:void(0)" class="button js-filter" data-art-subject="animal">Animals</a></li>
+                              </ul>
+                        </div>
+
+                  <div id="artCarouselBox">
+                        <div class="slider filtering" id="artCarousel">
+                              <div class="artImage" data-art-subject="landscape" data-art-media="gouache"><img src="images/artimages/orcas.jpg" class="img-responsive"  ></div>
+                              <div class="artImage" data-art-subject="landscape" data-art-media="gouache"><img src="images/artimages/orcas2.jpg" class="img-responsive"></div>
+                              <div class="artImage" data-art-subject="landscape" data-art-media="oil"><img src="images/artimages/sunset.jpg" class="img-responsive"></div>
+                              <div class="artImage" data-art-subject="figure" data-art-media="gouache"><img src="images/artimages/figures600x800.jpg" class="img-responsive"></div>
+                              <div class="artImage" data-art-subject="figure" data-art-media="gouache"><img src="images/artimages/figures600x800.jpg" class="img-responsive"></div>
+                              <div class="artImage" data-art-subject="figure" data-art-media="oil"><img src="images/artimages/figures600x800.jpg" class="img-responsive"></div>
+                              <div class="artImage" data-art-subject="portrait" data-art-media="gouache"><img src="images/artimages/portrait600x800.jpg" class="img-responsive"></div>
+                              <div class="artImage" data-art-subject="portrait" data-art-media="gouache"><img src="images/artimages/portrait600x800.jpg" class="img-responsive"></div>
+                              <div class="artImage" data-art-subject="portrait" data-art-media="oil"><img src="images/artimages/portrait600x800.jpg" class="img-responsive"></div>
+                        </div>
+                  </div>
+
+<!--      <div id="artCarouselBox">           
+            <div id="artCarousel">
+                  <div class="artImage"><img src="images/artimages/orcas.jpg" class="img-responsive" data-art-subject="landscape" data-art-media="gouache"></div>
+                  <div class="artImage"><img src="images/artimages/orcas2.jpg" class="img-responsive" data-art-subject="landscape" data-art-media="gouache"></div>
+                  <div class="artImage"><img src="images/artimages/sunset.jpg" class="img-responsive" data-art-subject="landscape" data-art-media="oil"></div>
+                  <div class="artImage"><img src="images/artimages/figures600x800.jpg" class="img-responsive" data-art-subject="figure" data-art-media="gouache"></div>
+                  <div class="artImage"><img src="images/artimages/figures600x800.jpg" class="img-responsive" data-art-subject="figure" data-art-media="gouache"></div>
+                  <div class="artImage"><img src="images/artimages/figures600x800.jpg" class="img-responsive" data-art-subject="figure" data-art-media="oil"></div>
+                  <div class="artImage"><img src="images/artimages/portrait600x800.jpg" class="img-responsive" data-art-subject="figure" data-art-media="gouache"></div>
+                  <div class="artImage"><img src="images/artimages/portrait600x800.jpg" class="img-responsive" data-art-subject="figure" data-art-media="gouache"></div>
+                  <div class="artImage"><img src="images/artimages/portrait600x800.jpg" class="img-responsive" data-art-subject="figure" data-art-media="oil"></div>
+            </div>
+      </div> -->
+
+  <!-- jQuery include -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <!--     SAL Added smooth scrolling ref=https://github.com/kswedberg/jquery-smooth-scroll -->
+  <script src="js/jquery.smooth-scroll.min.js" type="text/javascript" ></script>
+  <!-- slick -->
+  <script type="text/javascript" src="slick/slick.min.js"></script>
+  <!-- Bootstraps's javaScript-->
+  <script src="js/bootstrap.min.js"></script>
+  <!-- SAL: Custom script -->
+  <script type="text/javascript">
+            $(document).ready(function(){
+                  $('.filtering').slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                  });
+
+                  var filtered = false;
+                  $('.js-filter').on('click', function(){
+                    var navArtSubject = $(this).data('art-subject');
+
+                    if(filtered === false) {
+                      $('.filtering').slickFilter('[data-art-subject="' + navArtSubject + '"]');
+                      $(this).css( "background-color", "red" );
+                      filtered = true;
+                    } else {
+                      $('.filtering').slickUnfilter();
+                      $(this).css( "background-color", "transparent" );
+                      filtered = false;
+                    }
+                    console.log(navArtSubject);
+                  });           
+            });
+
+
+
+  </script>
+</body>
+</html>

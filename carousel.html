@@ -83,7 +83,7 @@
                   $('.js-filter').on('click', function(){
                     var navArtSubject = $(this).data('art-subject');
                     var navArtMedia = $(this).data('art-media');
-                    var navArtTabStyle = $(this).css('font-family');
+                    $('.filtering').slickUnfilter();
 /*Invoke the switch statement with an Onclick event */       
                   artNavSelection(navArtSubject);
 
@@ -93,15 +93,8 @@
 
                       case 'figurine':
                               if (figurineFiltered === false) {
-/*                                    $('.filtering').slickUnfilter(function(navArtSubject){
-                                          MAYBE SOMETHING HERE?
-
-                                          });*/
                                     $('.filtering').slickFilter('[data-art-subject="' + navArtSubject + '"]');  
                                     figurineFiltered = true;
-                                    console.log(navArtSubject);
-                                    console.log(navArtTabStyle);
-                                    navArtTabStyle = 'blue';
                               } else {
                                     $('.filtering').slickUnfilter();
                                     figurineFiltered = false;
@@ -110,32 +103,25 @@
 
                         case 'landscape':
                               if (landscapeFiltered === false) {
-                                    $('.filtering').slickUnfilter();
                                     $('.filtering').slickFilter('[data-art-subject="' + navArtSubject + '"]');
                                     landscapeFiltered = true;
                               } else {
-                                   $('.filtering').slickUnfilter();
                                     landscapeFiltered = false;
                               }
                         break;
                         case 'people':
-                              if (peopleFiltered === false) {
-                                    $('.filtering').slickUnfilter();          
+                              if (peopleFiltered === false) {        
                                     $('.filtering').slickFilter('[data-art-subject="' + navArtSubject + '"]');
                                     peopleFiltered = true;
                               } else {
-                                   $('.filtering').slickUnfilter();
                                     peopleFiltered = false;
                               }
                         break;
                         case 'animal':
                               if (animalFiltered === false) {
-                                    $('.filtering').slickUnfilter(); 
                                     $('.filtering').slickFilter('[data-art-subject="' + navArtSubject + '"]');
                                     animalFiltered = true;
-                                    console.log(navArtSubject);
                               } else {
-                                   $('.filtering').slickUnfilter();
                                     animalFiltered = false;
                               }
                         break;
@@ -163,18 +149,3 @@
   </script>
 </body>
 </html>
-
-
-<!--                       case 'XXX':
-                              if (XXXFiltered === false) {
-                                    $('.filtering').slickFilter('[data-art-subject="' + navArtSubject + '"]');
-                                    $('.filtering').slickUnFilter(!'[data-art-subject="' + navArtSubject + '"]');   
-                                    $(this).css( "color", "red" );
-                                    XXXFiltered = true;
-                                    console.log(navArtSubject);
-                              } else {
-                                    $('.filtering').slickUnfilter();
-                                    $(this).css();
-                                    XXXFiltered = false;
-                              }
-                        break; -->

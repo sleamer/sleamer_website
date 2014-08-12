@@ -16,18 +16,15 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-<!-- SAL: Bootstrap Carousel CSS -->
-    <link rel="stylesheet" type="text/css" href="css/carousel.css">
-<!-- SAL: This activates the scrollspy navigation -->
     <link href="css/navbar-fixed-top.css" rel="stylesheet">
+
     <link rel="stylesheet" type="text/css" href="slick/slick.css">
 <!--     SAL: Personal Styles -->
     <link rel="stylesheet" type="text/css" href="css/sleamerstyle.css">
   </head>
   <body class="regular_body" data-spy="scroll" data-target="#scrolling">
 
-   <!-- NAVBAR
-================================================== -->
+<!-- NAVBAR BOOTSTRAP============================================ -->
     <div class="navbar-wrapper">
       <div class="container">
         <nav id="scrolling" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -54,64 +51,68 @@
 
       </div>
     </div>
-<!-- /Navbar-->
-<!-- ================================ -->
-    <div class="row">
-      <div class="col-md-10 col-md-offset-1">    
-        <div id="artCarouselBox">
-          <!-- SAL: Art Navigation -->
-          <nav>
-            <ul class="nav nav-pills" role="tablist">
-              <li class="active"><a href="#">All</a></li>
-              <li class="artSubjectNav"><a href="#">Landscapes</a></li>
-              <li class="artSubjectNav"><a href="#">Figures</a></li>
-              <li class="artSubjectNav"><a href="#">Portraits</a></li>
-              <li class="artSubjectNav"><a href="#">Figures</a></li>
-            </ul>
-          </nav>
-          <!-- /SAL: Art Navigation -->
-          
-            <div class="row">
-              <!-- List of Art images -->
-              <div id="artCarousel">
-                  <div class="artImage"><img src="images/artimages/orcas.jpg" class="img-responsive" data-art-subject="landscape" data-art-media="gouache"></div>
-                  <div class="artImage"><img src="images/artimages/orcas2.jpg" class="img-responsive" data-art-subject="landscape" data-art-media="gouache"></div>
-                  <div class="artImage"><img src="images/artimages/sunset.jpg" class="img-responsive" data-art-subject="landscape" data-art-media="oil"></div>
-                  <div class="artImage"><img src="images/artimages/figures600x800.jpg" class="img-responsive" data-art-subject="figure" data-art-media="gouache"></div>
-                  <div class="artImage"><img src="images/artimages/figures600x800.jpg" class="img-responsive" data-art-subject="figure" data-art-media="gouache"></div>
-                  <div class="artImage"><img src="images/artimages/figures600x800.jpg" class="img-responsive" data-art-subject="figure" data-art-media="oil"></div>
-                  <div class="artImage"><img src="images/artimages/portrait600x800.jpg" class="img-responsive" data-art-subject="figure" data-art-media="gouache"></div>
-                  <div class="artImage"><img src="images/artimages/portrait600x800.jpg" class="img-responsive" data-art-subject="figure" data-art-media="gouache"></div>
-                  <div class="artImage"><img src="images/artimages/portrait600x800.jpg" class="img-responsive" data-art-subject="figure" data-art-media="oil"></div>
-              </div><!-- /artCarousel -->           
-              <!-- /List of Art images -->    
-            </div><!-- /row -->
-        </div><!-- /artCarouselBox -->
-      </div><!-- /cols-md-9 -->
-    </div><!-- /row -->
+<!-- /NAVBAR BOOTSTRAP-->
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+<!--                   ART NAV -->
+                  <div class="filter">
+                        <ul class="nav nav-pills" role="tablist">
+                          <li class="active"><a href="javascript:void(0)" class="button js-filter" data-art-subject="all">All</a></li>
+                          <li><a href="javascript:void(0)" class="button js-filter" data-art-subject="figurine">Figurines</a></li>
+                          <li><a href="javascript:void(0)" class="button js-filter" data-art-subject="landscape">Landscapes</a></li>
+                          <li><a href="javascript:void(0)" class="button js-filter" data-art-subject="people">People</a></li>
+                          <li><a href="javascript:void(0)" class="button js-filter" data-art-subject="animal">Animals</a></li>
+                        </ul>
+                  </div>
+<!--                   ART NAV -->
 
-      <!-- FOOTER -->
+      <!--ART Images -->
+                  <div class="row">
+                  <div id="artCarouselBox">
+                        <div class="slider filtering " id="artCarousel">
+                        <!-- SAL: Landscape images -->
+                              <div class="artImage" data-art-subject="landscape" data-art-media="gouache"><img src="images/artimages/orcas.jpg" class="img-responsive"  ></div>
+                              <div class="artImage" data-art-subject="landscape" data-art-media="gouache"><img src="images/artimages/orcas2.jpg" class="img-responsive"></div>
+                              <div class="artImage" data-art-subject="landscape" data-art-media="oil"><img src="images/artimages/sunset.jpg" class="img-responsive"></div>
+                        <!-- SAL: /Landscape images -->
+                        <!-- SAL: People images -->
+                              <div class="artImage" data-art-subject="people" data-art-media="gouache"><img src="images/artimages/figures800x600.jpg" class="img-responsive"></div>
+                              <div class="artImage" data-art-subject="people" data-art-media="gouache"><img src="images/artimages/figures800x600.jpg" class="img-responsive"></div>
+                              <div class="artImage" data-art-subject="people" data-art-media="oil"><img src="images/artimages/figures800x600.jpg" class="img-responsive"></div>
+                        <!-- SAL: /People images -->
+                        <!-- SAL: Animal images -->
+                              <div class="artImage" data-art-subject="animal" data-art-media="gouache"><img src="images/artimages/animal800x600.jpg" class="img-responsive"></div>
+                              <div class="artImage" data-art-subject="animal" data-art-media="gouache"><img src="images/artimages/animal800x600.jpg" class="img-responsive"></div>
+                              <div class="artImage" data-art-subject="animal" data-art-media="oil"><img src="images/artimages/animal800x600.jpg" class="img-responsive"></div>
+                        <!-- SAL: /Animal images -->
+                        <!-- SAL: Figurine images -->
+                              <div class="artImage" data-art-subject="figurine" data-art-media="gouache"><img src="images/artimages/figurine800x600.jpg" class="img-responsive"></div>
+                              <div class="artImage" data-art-subject="figurine" data-art-media="gouache"><img src="images/artimages/figurine800x600.jpg" class="img-responsive"></div>
+                              <div class="artImage" data-art-subject="figurine" data-art-media="oil"><img src="images/artimages/figurine800x600.jpg" class="img-responsive"></div>
+                        <!-- SAL: /Figurine images -->
+                        </div>
+                  </div>
+                  </div>
+      <!-- ART Images -->   
+          
+    </div><!-- /col-md-10 col-md-offset-1-->
+  </div><!-- /row -->
+
+  <!-- FOOTER -->
       <footer>
         <p class="pull-right"><a href="#">Back to top</a></p>
         <p>&copy; Sleamer 2014 </p>
       </footer>
-  </div><!-- /.container -->
   <!-- jQuery include -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <!--     SAL Added smooth scrolling ref=https://github.com/kswedberg/jquery-smooth-scroll -->
-  <script src="js/jquery.smooth-scroll.min.js" type="text/javascript" ></script>
+  <script type="text/javascript" src="js/jquery.smooth-scroll.min.js" ></script>
+  <!-- Bootstraps's javaScript-->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>  
   <!-- slick -->
   <script type="text/javascript" src="slick/slick.min.js"></script>
-  <!-- Bootstraps's javaScript-->
-  <script src="js/bootstrap.min.js"></script>
-  <!-- SAL: Custom script -->
+
+  <!-- SAL: Custom scripts -->
   <script type="text/javascript" src="js/sleamer.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-

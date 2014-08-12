@@ -23,8 +23,15 @@ body {
   height: 100px;
 }
 
+/* line 24, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
+.artImage img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* ======================================================= */
-/* line 27, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
+/* line 31, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
 #artCarouselBox {
   border: 1px solid black;
   background: #200808;
@@ -34,46 +41,46 @@ body {
   padding-top: .5%;
 }
 
-/* line 36, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
+/* line 40, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
 .regular_body {
   padding-top: 50px;
 }
 
 /* SAL: overriding bootstrap */
-/* line 42, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
+/* line 46, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
 .home-portal-img {
   width: 200px;
   height: 200px;
 }
 
-/* line 47, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
+/* line 51, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
 label {
   color: #7F8A63;
 }
 
 /* SAL: for the love of god could not find what variable controls these in _variables.scss */
-/* line 55, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
+/* line 59, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
 h2 {
   color: #200808;
 }
 
-/* line 59, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
+/* line 63, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
 p {
   color: #7F8A63;
   font-size: 1.2em;
 }
 
-/* line 64, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
+/* line 68, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
 hr.featurette-divider {
   border-color: #200808;
 }
 
-/* line 68, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
+/* line 72, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
 .featurette-image {
   margin-top: 5%;
 }
 
-/* line 72, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
+/* line 76, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
 #homeresumeLink {
   color: darkred;
   background: #7F8A63;
@@ -81,7 +88,7 @@ hr.featurette-divider {
   border-radius: 4px;
 }
 
-/* line 79, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
+/* line 83, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
 #resume_body {
   border-radius: 4px;
   width: 80%;
@@ -93,36 +100,36 @@ hr.featurette-divider {
   margin-top: -5%;
   margin-bottom: 5%;
 }
-/* line 89, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
+/* line 93, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
 #resume_body p {
   color: #200808;
   font-size: 1em;
 }
-/* line 93, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
+/* line 97, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
 #resume_body .resume_section {
   margin-left: 3%;
   margin-right: 3%;
 }
-/* line 97, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
+/* line 101, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
 #resume_body h3 {
   margin-bottom: 3%;
   margin-top: 3%;
 }
-/* line 101, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
+/* line 105, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
 #resume_body .resume_address {
   font: em;
 }
-/* line 104, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
+/* line 108, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
 #resume_body h4 {
   margin-bottom: 1%;
   margin-top: 3%;
 }
-/* line 108, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
+/* line 112, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
 #resume_body .resumeLink {
   color: darkred;
   background: #7F8A63;
 }
-/* line 112, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
+/* line 116, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
 #resume_body .resumeTitle {
   font-weight: bold;
   font-style: italic;
@@ -130,7 +137,7 @@ hr.featurette-divider {
 
 /* SAL: this overrides the featurette -about-contact headings in carousel.css */
 @media (min-width: 992px) {
-  /* line 121, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
+  /* line 125, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
   .featurette-heading {
     margin-top: 20px;
   }

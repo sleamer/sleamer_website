@@ -16,20 +16,18 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-<!-- SAL: Bootstrap Carousel CSS -->
+    <!-- Bootstrap Carousel CSS -->
    	<link rel="stylesheet" type="text/css" href="css/carousel.css">
-<!-- SAL: This activates the scrollspy navigation -->
+    <!-- SAL: This activates the scrollspy navigation -->
     <link href="css/navbar-fixed-top.css" rel="stylesheet">
-<!--     SAL: Personal Styles -->
+    <!-- Personal Styles -->
    	<link rel="stylesheet" type="text/css" href="css/sleamerstyle.css">
   </head>
   <body data-spy="scroll" data-target="#scrolling">
 
-   <!-- NAVBAR
-================================================== -->
+   <!-- NAVBAR BOOTSTRAP============================================ -->
     <div class="navbar-wrapper">
       <div class="container">
-<!-- SAL: Fixed nav = navbar-static-top -->
         <nav id="scrolling" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -43,40 +41,19 @@
             </div>
             <div class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
+                <li class="active"><a href="#home">Home</a></li>
                 <li><a href="#webdev">Web Development</a></li>
                 <li><a href="http://www.trumpetmurals.com">Murals</a></li>
-                
-<!--                 SAL:  Add art filtering from nav later -->
-                <li><!-- class="dropdown" -->
-                  <a href="art.html">Fine Art<!--  <span class="caret"> --><!-- </span> --></a><!-- data-toggle="dropdown" class="dropdown-toggle" -->
-                  <!-- <ul class="dropdown-menu" role="menu">
-                  	<li><a href="art/art.html">All Work</a></li>
-                    <li class="dropdown-header">By Subject Matter</li>
-                    <li><a href="#">Action Figures</a></li>
-                    <li><a href="#">Landscapes</a></li>
-                    <li><a href="#">Animals</a></li>
-                    <li><a href="#">Figures/Portriats</a></li>
-                    <li class="divider"></li>
-                    <li class="dropdown-header">By Medium</li>
-                    <li><a href="#">3-D</a></li>
-                    <li><a href="#">Acrylic</a></li>
-                    <li><a href="#">Oil</a></li>
-                    <li><a href="#">Gouache/Watercolor</a></li>
-                    <li><a href="#">Drawing</a></li>
-                  </ul> -->
-                </li>
-
+                <li><a href="art.html">Fine Art</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
               </ul>
             </div>
           </div>
         </nav>
-
       </div>
     </div>
-
+   <!-- /NAVBAR BOOTSTRAP======================================= -->
 
 
 
@@ -85,8 +62,8 @@
     <!-- Marketing messaging and featurettes
     ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
-
-    <div class="container marketing">
+    <div id="home" class="navSpacerCorrection"></div>
+    <div class="container marketing" >
 
       <!-- Three columns of text below the carousel -->
       <div class="row">
@@ -113,9 +90,9 @@
 
       <!-- START THE FEATURETTES -->
 
-      <hr class="featurette-divider">
-
-      <div class="row featurette" id="about">
+      <hr class="featurette-divider" >
+      <div id="about" class="navSpacerCorrection"></div>
+      <div class="row featurette">
         <div class="col-md-7">
           <h2 class="featurette-heading">About me</h2>
           <p>I am a Web Developer/Artist hybrid who is drawn to projects that integrate technical and aesthetic skills.  
@@ -136,7 +113,7 @@
 
       <hr class="featurette-divider">
 
-
+      <div id="contact" class="navSpacerCorrection"></div>
       <div class="row featurette" id="contact">
         <div class="col-md-7">
           <h2 class="featurette-heading">Contact</h2>
@@ -193,7 +170,9 @@
     
     <!-- Carousel
     ================================================== -->
-    <div id="webdev">
+    <div id="webdev" class="navSpacerCorrection"></div>
+    
+    <div><h2 class="featurette-heading">Web Development</h2>
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
       <ol class="carousel-indicators">

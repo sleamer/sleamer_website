@@ -1,5 +1,5 @@
 $(document).ready(function(){
-      $('a').click().smoothScroll({offset: -100});
+      $('a').click().smoothScroll(/*{offset: -100}*/);
       var $carousel = $('#artCarousel');
       $carousel.slick({
       slidesToShow: 1,

@@ -11,8 +11,13 @@ body {
     padding-top: 60px;
   }
 }
+/* line 11, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
+.navSpacerCorrectionWebDev {
+  height: 60px;
+}
+
 /* ======================================================= */
-/* line 13, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
+/* line 16, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
 .filterBox {
   font-size: 2em;
   background-color: white;
@@ -23,12 +28,12 @@ body {
   height: 100px;
 }
 
-/* line 24, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
+/* line 27, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
 #home {
   /* SAL: use this ID to correct "home" navigation spacing later */
 }
 
-/* line 27, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
+/* line 30, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
 .artImage img {
   display: block;
   margin-left: auto;
@@ -36,7 +41,7 @@ body {
 }
 
 /* ======================================================= */
-/* line 34, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
+/* line 37, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
 #artCarouselBox {
   border: 1px solid black;
   background: #200808;
@@ -47,13 +52,13 @@ body {
   border-radius: 4px;
 }
 
-/* line 44, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
+/* line 47, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
 .regular_body {
   padding-top: 50px;
 }
 
 /* SAL: overriding bootstrap */
-/* line 50, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
+/* line 53, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
 .home-portal-img {
   width: 200px;
   height: 200px;
@@ -65,28 +70,28 @@ body {
 }
  */
 /* SAL: for the love of god could not find what variable controls these in _variables.scss */
-/* line 63, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
+/* line 66, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
 h2 {
   color: #200808;
 }
 
-/* line 67, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
+/* line 70, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
 p {
   color: #7F8A63;
   font-size: 1.2em;
 }
 
-/* line 72, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
+/* line 75, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
 hr.featurette-divider {
   border-color: #200808;
 }
 
-/* line 76, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
+/* line 79, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
 .featurette-image {
   margin-top: 5%;
 }
 
-/* line 80, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
+/* line 83, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
 #homeresumeLink {
   color: darkred;
   background: #7F8A63;
@@ -94,12 +99,12 @@ hr.featurette-divider {
   border-radius: 4px;
 }
 
-/* line 87, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
+/* line 90, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
 .navSpacerCorrection {
   height: 100px;
 }
 
-/* line 91, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
+/* line 94, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
 #resume_body {
   border-radius: 4px;
   width: 80%;
@@ -111,67 +116,67 @@ hr.featurette-divider {
   margin-top: -5%;
   margin-bottom: 5%;
 }
-/* line 101, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
+/* line 104, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
 #resume_body p {
   color: #200808;
   font-size: 1em;
 }
-/* line 105, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
+/* line 108, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
 #resume_body .resume_section {
   margin-left: 3%;
   margin-right: 3%;
 }
-/* line 109, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
+/* line 112, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
 #resume_body h3 {
   margin-bottom: 3%;
   margin-top: 3%;
 }
-/* line 113, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
+/* line 116, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
 #resume_body .resume_address {
   font: em;
 }
-/* line 116, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
+/* line 119, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
 #resume_body h4 {
   margin-bottom: 1%;
   margin-top: 3%;
 }
-/* line 120, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
+/* line 123, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
 #resume_body .resumeLink {
   color: darkred;
   background: #7F8A63;
 }
-/* line 124, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
+/* line 127, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
 #resume_body .resumeTitle {
   font-weight: bold;
   font-style: italic;
 }
 
 /* MailChimp Embedded Style */
-/* line 132, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
+/* line 135, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
 #mc_embed_signup {
   background: #423526;
   clear: left;
   font: 14px Helvetica,Arial,sans-serif;
   border-radius: 4px;
 }
-/* line 137, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
+/* line 140, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
 #mc_embed_signup p.lead, #mc_embed_signup label {
   color: #7F8A63;
 }
-/* line 140, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
+/* line 143, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
 #mc_embed_signup .asterisk {
   color: darkred;
 }
 
 /* SAL: this overrides the featurette -about-contact headings in carousel.css */
 @media (min-width: 992px) {
-  /* line 147, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
+  /* line 150, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
   .featurette-heading {
     margin-top: 20px;
   }
 }
 /* SAL: This centers Bootstrap tabs on a page */
-/* line 154, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
+/* line 157, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
 .nav-tabs > li, .nav-pills > li {
   float: none;
   display: inline-block;
@@ -181,7 +186,7 @@ hr.featurette-divider {
   /* hasLayout ie7 trigger */
 }
 
-/* line 161, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
+/* line 164, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
 .nav-tabs, .nav-pills {
   text-align: center;
 }

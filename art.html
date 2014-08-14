@@ -23,7 +23,7 @@
     <!--SAL: Personal Styles -->
     <link rel="stylesheet" type="text/css" href="css/sleamerstyle.css">
   </head>
-  <body class="regular_body" data-spy="scroll" data-target="#scrolling">
+  <body  class="regular_body">
 
 <!-- NAVBAR BOOTSTRAP============================================ -->
     <div class="navbar-wrapper">
@@ -55,7 +55,8 @@
     </div>
 <!-- /NAVBAR BOOTSTRAP-->
   <div class="row">
-    <div class="col-md-8 col-md-offset-2">
+    <div class="col-md-2 hidden-sm hidden-xs"><img src="images/corner_frame_left.png" class="img-responsive" alt="Picture Frame"></div>
+    <div class="col-md-8">
           <!-- ART NAV -->
                   <div class="filter">
                         <ul class="nav nav-pills" role="tablist">
@@ -163,14 +164,23 @@
                   </div>
       <!-- ART Images -->   
           
-    </div><!-- /col-md-8 col-md-offset-2-->
+    </div><!-- /col-md-8-->
+    <div class="col-md-2 hidden-sm hidden-xs"><img src="images/corner_frame_right.png" class="img-responsive" alt="Picture Frame"></div>
   </div><!-- /row -->
 
-  <!-- FOOTER -->
+      <!-- FOOTER -->
       <footer>
-        <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; Sleamer 2014 </p>
+        <div class="row">
+          <div class="col-md-2 col-md-offset-1">
+            <p><a href="#">Back to top</a></p>
+          </div>
+          <div class="col-md-2 col-md-offset-6">
+            <p>&copy; Sleamer 2014 </p>
+          </div>
+        </div>
       </footer>
+      <!-- /FOOTER -->
+
   <!-- jQuery include -->
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <!--     SAL Added smooth scrolling ref=https://github.com/kswedberg/jquery-smooth-scroll -->

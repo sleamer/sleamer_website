@@ -103,7 +103,9 @@ hr.featurette-divider {
 .navSpacerCorrection {
   height: 100px;
 }
-
+.navSpacerCorrectionProjects {
+  height: 120px;
+}
 /* line 94, ../assets/bootstrap-sass-3.2.0/assets/stylesheets/sleamerstyle.scss */
 #resume_body {
   border-radius: 4px;
